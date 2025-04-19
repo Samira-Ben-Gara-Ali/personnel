@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: personnel
+    env: java
+    buildCommand: ./mvnw clean install
+    startCommand: java -jar target/*.jar
+    plan: free
+    envVars:
+      - key: SERVER_PORT
+        value: 8081
